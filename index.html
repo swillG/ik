@@ -26,14 +26,8 @@
     <div class="main-content">
       <div class="container">
         <div id="page-dashboard" class="page active">
-          <div
-            style="
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-              gap: 25px;
-            "
-          >
-            <div class="stat-card" style="grid-column: span 3">
+          <div style="display: flex; flex-wrap: wrap; gap: 25px">
+            <div class="stat-card" style="flex-basis: 100%; width: 100%">
               <h3
                 style="
                   font-size: 0.8rem;
@@ -55,7 +49,7 @@
                 0
               </p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" style="flex: 1 1 240px; min-width: 240px">
               <h3>Male</h3>
               <p
                 id="dash-male"
@@ -64,7 +58,7 @@
                 0
               </p>
             </div>
-            <div class="stat-card">
+            <div class="stat-card" style="flex: 1 1 240px; min-width: 240px">
               <h3>Female</h3>
               <p
                 id="dash-female"
@@ -76,14 +70,12 @@
           </div>
 
           <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 25px;
-              margin-top: 25px;
-            "
+            style="display: flex; flex-wrap: wrap; gap: 25px; margin-top: 25px"
           >
-            <div class="card">
+            <div
+              class="card"
+              style="flex: 1 1 calc(50% - 12px); min-width: 280px"
+            >
               <h2 style="font-size: 1.1rem; margin-top: 0">🌟 Top Achievers</h2>
               <div
                 id="star-container"
@@ -92,7 +84,13 @@
             </div>
             <div
               class="card"
-              style="display: flex; flex-direction: column; align-items: center"
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1 1 calc(50% - 12px);
+                min-width: 280px;
+              "
             >
               <h3
                 style="
